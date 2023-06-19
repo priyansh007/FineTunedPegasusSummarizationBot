@@ -1,0 +1,10 @@
+pandas
+nltk
+bs4
+requests
+transformers
+torch
+sentencepiece
+accelerate>=0.20.1
+rouge
+protobuf==3.20.0
