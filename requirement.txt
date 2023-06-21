@@ -4,6 +4,7 @@ bs4
 requests
 transformers
 torch
+datasets
 sentencepiece
 accelerate>=0.20.1
 rouge

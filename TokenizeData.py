@@ -1,6 +1,9 @@
 from transformers import PegasusTokenizer
 import os
+import torch
+
 tokenizer = PegasusTokenizer.from_pretrained("google/pegasus-cnn_dailymail")
+
 data_folder = "./outputs"
 input_ids = []
 attention_masks = []
@@ -11,7 +14,7 @@ for filename in os.listdir(data_folder):
             text = file.read()
             tokens = tokenizer(text, truncation=True, padding="longest", max_length=1020, return_tensors="pt")
             input_ids.append(tokens['input_ids'][0])
-            attention_masks.append(tokens['input_ids'][0])
+            attention_masks.append(tokens['attention_mask'][0])
 print(f"Some demo inputIds: {input_ids[0]}")
 from torch.utils.data import Dataset
 class NewsDataset(Dataset):
@@ -25,3 +28,5 @@ class NewsDataset(Dataset):
     def __getitem__(self, idx):
         return self.input_ids[idx], self.attn_masks[idx]
 dataset = NewsDataset(input_ids, attention_masks)
+path = './model/my_dataset.pt'
+torch.save(dataset, path)
