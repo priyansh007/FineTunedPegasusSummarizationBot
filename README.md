@@ -6,7 +6,7 @@ This project focuses on fine-tuning the Google's Hugging Face Pegasus model, a s
 ## Setup
 To set up the project environment, run the following command:
 1. Install the required libraries by running the following command
-`!pip install -r requirements.txt`
+`!pip install -r requirement.txt`
 
 ## Folder Structure
 The project's folder structure is as follows:
