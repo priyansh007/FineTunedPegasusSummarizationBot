@@ -28,5 +28,8 @@ class NewsDataset(Dataset):
     def __getitem__(self, idx):
         return self.input_ids[idx], self.attn_masks[idx]
 dataset = NewsDataset(input_ids, attention_masks)
+folder_path = "model"
+if not os.path.exists(folder_path):
+    os.makedirs(folder_path)
 path = './model/my_dataset.pt'
 torch.save(dataset, path)

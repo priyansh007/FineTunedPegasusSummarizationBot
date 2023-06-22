@@ -42,7 +42,7 @@ learning_rate = 5e-5
 
 
 training_args = TrainingArguments(output_dir=f'./results_{learning_rate}',
-                                  num_train_epochs=1,
+                                  num_train_epochs=10,
                                   logging_steps=1000,
                                   save_steps=1000,
                                   evaluation_strategy='steps',
