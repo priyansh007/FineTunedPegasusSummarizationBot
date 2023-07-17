@@ -39,6 +39,10 @@ The Bestmodel.py script employs the Hugging Face summarization models and the RO
 ### Train_model.py
 The Train_model.py file performs the actual fine-tuning of the Pegasus model. It uses the dataset from my_dataset.pt to train the model, saving the trained model into the model/ folder. Additionally, it evaluates the model's performance using the ROUGE score.
 
+### Website:
+Demo website and code can be found at: https://replit.com/@PriyanshZalavad/NewsNebulaFinal
+Website shows how to consume model in website using Flask, Python, Html and CSS
+
 ## Conclusion
 This project showcases the process of fine-tuning Google's Hugging Face Pegasus model for abstractive text summarization. By following the outlined steps, including data preprocessing, tokenization, model selection, and training, it becomes possible to generate high-quality summaries for various text inputs.
 
